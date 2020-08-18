@@ -1,0 +1,8 @@
+1. Proper Bold for Lohit Devanagari
+ - https://bugzilla.redhat.com/show_bug.cgi?id=648350
+2. Correct id of these to above than 100001 65514...65528,65531 65533
+
+RFE:
+1. Support Vedic Extensions
+2. Add Devanagari Script Northern Variant in Lohit Devanagari Font
+
