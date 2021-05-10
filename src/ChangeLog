@@ -1,5 +1,9 @@
 				  lohit-devanagari
-Current Version :- 2.95.4
+Current Version :- 2.95.5
+
+* Mon May 10 2021 Vishal Vijayraghavan <vishalvvr@fedoraproject.org> - 2.95.5
+- Resolves #1958634: Typographic error in configuration file of lohit-devanagari
+- Changed upstream repo
 
 * Wed Apr 26 2017 Pravin Satpute <psatpute@redhat.com> - 2.95.4
 - Added appstream metadata file io.pagure.lohit.devanagari.font.metainfo.xml
