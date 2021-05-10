@@ -1,10 +1,10 @@
-SplineFontDB: 3.0
+SplineFontDB: 3.2
 FontName: Lohit-Devanagari
 FullName: Lohit Devanagari
 FamilyName: Lohit Devanagari
 Weight: Book
 Copyright: Copyright 2011-12 Lohit Fonts Project contributors.\n<http://fedorahosted.org/lohit>\nOpen type tables written by:\nPravin Satpute <psatpute AT redhat DOT com>\nSneha Kore <skore At redhat DOT com>\nLatin glyphs designed by:\nEduardo Rodriguez Tunni <fontime AT gmail DOT com>\n\n   Licensed under the SIL Open Font License 1.1 (see file OFL.txt)
-Version: 2.95.4
+Version: 2.95.5
 ItalicAngle: 0
 UnderlinePosition: -399
 UnderlineWidth: 26
@@ -21,7 +21,7 @@ OS2Version: 1
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1159459513
-ModificationTime: 1441708389
+ModificationTime: 1620671273
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -475,15 +475,16 @@ ShortTable: maxp 16
   0
   0
 EndShort
-LangName: 1033 "" "" "Regular" "FontForge 2.0 : Lohit Devanagari : 17-9-2013" "" "2.95.4" "" "Lohit is a trademark of Red Hat, Inc.+AAoA" "" "" "" "" "" "OFL 1.1" "http://scripts.sil.org/OFL"
+LangName: 1033 "" "" "Regular" "FontForge 2.0 : Lohit Devanagari : 17-9-2013" "" "2.95.5" "" "Lohit is a trademark of Red Hat, Inc.+AAoA" "" "" "" "" "" "OFL 1.1" "http://scripts.sil.org/OFL"
 GaspTable: 2 8 2 65535 3 0
 Encoding: UnicodeBmp
+Compacted: 1
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -36
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 2244 44 16
+WinInfo: 44 44 16
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -540,7 +541,7 @@ Grid
  316 872 321 884 321 898 c 256
 EndSplineSet
 TeXData: 1 0 0 323584 161792 107861 0 1048576 107861 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "DVAnchor2" "'abvm' Above Base Mark lookup 3-1" "DVAnchor1" "'blwm' Below Base Mark lookup 2-1" "DVAnchor0" "blwmBelowBaseMarklookup0 subtable" "DVAnchor3" "abvmAboveBaseMarklookup3 subtable" 
+AnchorClass2: "DVAnchor2" "'abvm' Above Base Mark lookup 3-1" "DVAnchor1" "'blwm' Below Base Mark lookup 2-1" "DVAnchor0" "blwmBelowBaseMarklookup0 subtable" "DVAnchor3" "abvmAboveBaseMarklookup3 subtable"
 BeginChars: 65745 709
 
 StartChar: .notdef

@@ -15,11 +15,11 @@ mkdir lohit-ttf-$date1
 sh generate.sh
 cp ChangeLog ChangeLog.old
 #for generating binary tar ball
-for i in assamese bengali devanagari gujarati  kannada  malayalam  marathi nepali odia  gurmukhi  tamil tamil-classical telugu 
+for i in devanagari 
 do
 ver=`cat $i/ChangeLog | grep "Current Version :-" | awk '{ print $4}'`
 mkdir lohit-$i-ttf-$ver
-cp COPYRIGHT OFL.txt ChangeLog.old README README.git AUTHORS $i/* lohit-$i-ttf-$ver
+cp COPYRIGHT OFL.txt ChangeLog.old README.md README.git AUTHORS $i/* lohit-$i-ttf-$ver
 cp $i/*.ttf lohit-ttf-$date1
 rm -rf lohit-$i-ttf-$ver/.git lohit-$i-ttf-$ver/*.sfd
 tar -cf lohit-$i-ttf-$ver.tar lohit-$i-ttf-$ver
@@ -34,11 +34,11 @@ rm -rf lohit-ttf-$date1
 
 
 #for generating source tar ball
-for i in assamese bengali devanagari gujarati  kannada  malayalam marathi nepali  odia  gurmukhi  tamil tamil-classical telugu
+for i in devanagari 
 do
 ver=`cat $i/ChangeLog | grep "Current Version :-" | awk '{ print $4}'`
 mkdir lohit-$i-$ver
-cp COPYRIGHT OFL.txt ChangeLog.old README README.git AUTHORS Makefile generate.pe $i/* lohit-$i-$ver
+cp COPYRIGHT OFL.txt ChangeLog.old README.md README.git AUTHORS Makefile generate.pe $i/* lohit-$i-$ver
 rm -rf lohit-$i-$ver/.git
 rm -rf lohit-$i-$ver/*.ttf
 tar -cf lohit-$i-$ver.tar lohit-$i-$ver

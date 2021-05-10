@@ -1,5 +1,6 @@
 all: sfd-dist ttf woff eot ttf-dist web-dist  
-version:= 2.95.4
+version:= 2.95.5
+sfntly:= java -jar /usr/share/java/sfnttool.jar
 
 test: test-ttf
 	@echo "----------Testing actual-output with expected-output----------"
@@ -16,19 +17,19 @@ ttf: ttf-bin
 
 woff: woff-bin
 	@echo "----------Generating woff from ttf file----------"
-	sfntly -w Lohit-Devanagari.ttf Lohit-Devanagari.woff
+	$(sfntly) -w Lohit-Devanagari.ttf Lohit-Devanagari.woff
 	@echo "----------Finished generating woff file----------"
 	@echo " "
 
 eot: eot-bin
 	@echo "----------Generating eot from ttf file----------"
-	sfntly -e -x Lohit-Devanagari.ttf Lohit-Devanagari.eot
+	$(sfntly) -e -x Lohit-Devanagari.ttf Lohit-Devanagari.eot
 	@echo "----------Finished generating eot file----------"
 	@echo " "
 
 ttf-dist: dist
 	mkdir lohit-devanagari-ttf-$(version)
-	cp -p COPYRIGHT OFL.txt test-devanagari.txt README  AUTHORS ChangeLog 66-lohit-devanagari.conf 59-lohit-devanagari.conf Lohit-Devanagari.ttf io.pagure.lohit.devanagari.font.metainfo.xml lohit-devanagari-ttf-$(version)
+	cp -p COPYRIGHT OFL.txt test-devanagari.txt README.md AUTHORS ChangeLog 66-lohit-devanagari.conf 59-lohit-devanagari.conf Lohit-Devanagari.ttf io.pagure.lohit.devanagari.font.metainfo.xml lohit-devanagari-ttf-$(version)
 	rm -rf lohit-devanagari-ttf-$(version)/.git
 	tar -cf lohit-devanagari-ttf-$(version).tar lohit-devanagari-ttf-$(version)
 	gzip lohit-devanagari-ttf-$(version).tar
@@ -36,7 +37,7 @@ ttf-dist: dist
 
 sfd-dist: dist
 	mkdir lohit-devanagari-$(version)
-	cp -p COPYRIGHT OFL.txt test-devanagari.txt README  AUTHORS generate*.pe apply_featurefile.py auto_test.py *.fea Makefile ChangeLog 66-lohit-devanagari.conf 59-lohit-devanagari.conf Lohit-Devanagari.sfd std-test-out.txt io.pagure.lohit.devanagari.font.metainfo.xml lohit-devanagari-$(version)
+	cp -p COPYRIGHT OFL.txt test-devanagari.txt README.md AUTHORS generate*.pe apply_featurefile.py auto_test.py *.fea Makefile ChangeLog 66-lohit-devanagari.conf 59-lohit-devanagari.conf Lohit-Devanagari.sfd std-test-out.txt io.pagure.lohit.devanagari.font.metainfo.xml lohit-devanagari-$(version)
 	rm -rf lohit-devanagari-$(version)/.git
 	rm -rf lohit-devanagari-$(version)/*.ttf
 	tar -cf lohit-devanagari-$(version).tar lohit-devanagari-$(version)
@@ -45,7 +46,7 @@ sfd-dist: dist
 
 web-dist: webdist
 	mkdir lohit-devanagari-web-$(version)
-	cp -p COPYRIGHT OFL.txt test-devanagari.txt README  AUTHORS ChangeLog Lohit-Devanagari.woff  Lohit-Devanagari.eot lohit-devanagari-web-$(version)
+	cp -p COPYRIGHT OFL.txt test-devanagari.txt README.md AUTHORS ChangeLog Lohit-Devanagari.woff  Lohit-Devanagari.eot lohit-devanagari-web-$(version)
 	rm -rf lohit-devanagari-web-$(version)/.git
 	tar -cf lohit-devanagari-web-$(version).tar lohit-devanagari-web-$(version)
 	gzip lohit-devanagari-web-$(version).tar
